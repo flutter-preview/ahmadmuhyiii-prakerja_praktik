@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prakerja_app_muhyi/menu_page.dart';
 import 'package:prakerja_app_muhyi/splash_page.dart';
 
 import 'myhome_page.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (_) => const SplashPage(),
         '/home': (_) => const MyHomePage(),
+        '/menu': (_) => const MenuPage(),
       },
     );
   }
