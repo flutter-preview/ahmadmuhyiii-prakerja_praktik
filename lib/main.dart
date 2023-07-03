@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prakerja_app_muhyi/deskripsi_page.dart';
 import 'package:prakerja_app_muhyi/menu_page.dart';
 import 'package:prakerja_app_muhyi/splash_page.dart';
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/': (_) => const SplashPage(),
         '/home': (_) => const MyHomePage(),
         '/menu': (_) => const MenuPage(),
+        '/deskripsi': (context) => const DeskripsiPage(),
       },
     );
   }

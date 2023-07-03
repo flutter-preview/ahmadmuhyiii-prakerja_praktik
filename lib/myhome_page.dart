@@ -24,21 +24,23 @@ class _MyHomePageState extends State<MyHomePage> {
           type: BottomNavigationBarType.fixed,
           backgroundColor: const Color.fromARGB(255, 108, 54, 9),
           elevation: 0,
-          selectedItemColor: Colors.yellow,
+          selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
           showSelectedLabels: true,
           showUnselectedLabels: true,
           selectedLabelStyle: const TextStyle(
             fontSize: 10,
             fontWeight: FontWeight.w500,
-            color: Colors.yellow,
+            color: Colors.white,
           ),
           unselectedLabelStyle: const TextStyle(
               fontSize: 10, fontWeight: FontWeight.w500, color: Colors.white),
           items: [
             BottomNavigationBarItem(
               icon: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/home');
+                },
                 child: Image.asset(
                   'assets/ic_home.png',
                   width: 20,
@@ -62,7 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             BottomNavigationBarItem(
               icon: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/deskripsi');
+                },
                 child: Image.asset(
                   'assets/ic_statistic.png',
                   width: 20,
@@ -220,43 +224,51 @@ Widget buildMinuman(BuildContext context) {
     margin: const EdgeInsets.only(
       top: 20,
     ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          'Beverages',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-            color: Colors.black,
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Beverages',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Row(
+                children: const [
+                  HomeBeverages(
+                    iconUrl: 'assets/ic_signature.png',
+                    title: 'Signatured',
+                  ),
+                  SizedBox(width: 10),
+                  HomeBeverages(
+                    iconUrl: 'assets/ic_iced_cofe.png',
+                    title: 'Iced Coffee',
+                  ),
+                  SizedBox(width: 10),
+                  HomeBeverages(
+                    iconUrl: 'assets/ic_product_food.png',
+                    title: 'Hot Coffee',
+                  ),
+                  SizedBox(width: 10),
+                  HomeBeverages(
+                    iconUrl: 'assets/ic_cokolat.png',
+                    title: 'Chocolate',
+                  ),
+                ],
+              ),
+            ],
           ),
-        ),
-        const SizedBox(
-          height: 5,
-        ),
-        Wrap(
-          spacing: 5,
-          runSpacing: 10,
-          children: const [
-            HomeBeverages(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Signatured',
-            ),
-            HomeBeverages(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Iced Coffee',
-            ),
-            HomeBeverages(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Hot Coffee',
-            ),
-            HomeBeverages(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Chocolate',
-            ),
-          ],
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }
@@ -266,43 +278,51 @@ Widget buildMakanan(BuildContext context) {
     margin: const EdgeInsets.only(
       top: 20,
     ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          'Foods',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-            color: Colors.black,
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Foods',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Row(
+                children: const [
+                  HomeFoods(
+                    iconUrl: 'assets/ic_cake.png',
+                    title: 'Signatured',
+                  ),
+                  SizedBox(width: 10),
+                  HomeFoods(
+                    iconUrl: 'assets/ic_bakery.png',
+                    title: 'Bakery',
+                  ),
+                  SizedBox(width: 10),
+                  HomeFoods(
+                    iconUrl: 'assets/ic_salad.png',
+                    title: 'Salad',
+                  ),
+                  SizedBox(width: 10),
+                  HomeFoods(
+                    iconUrl: 'assets/ic_yogurt.png',
+                    title: 'Yougurt',
+                  ),
+                ],
+              ),
+            ],
           ),
-        ),
-        const SizedBox(
-          height: 5,
-        ),
-        Wrap(
-          spacing: 5,
-          runSpacing: 10,
-          children: const [
-            HomeFoods(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Signatured',
-            ),
-            HomeFoods(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Bakery',
-            ),
-            HomeFoods(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Salad',
-            ),
-            HomeFoods(
-              iconUrl: 'assets/ic_product_food.png',
-              title: 'Yougurt',
-            ),
-          ],
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }
@@ -311,6 +331,7 @@ Widget buildMenu(BuildContext context) {
   return Container(
     margin: const EdgeInsets.only(
       top: 20,
+      left: 20,
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -328,51 +349,54 @@ Widget buildMenu(BuildContext context) {
         ),
         Wrap(
           spacing: 15,
-          runSpacing: 10,
-          children: const [
+          runSpacing: 15,
+          children: [
             MenuList(
               imageUrl: 'assets/americano.jpg',
               title: 'Americano',
               harga: 'Rp.21000',
               jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
             ),
-            MenuList(
+            const MenuList(
               imageUrl: 'assets/capucino.jpg',
               title: 'Capucino',
               harga: 'Rp.23000',
               jenis: 'coffee',
             ),
-            MenuList(
+            const MenuList(
               imageUrl: 'assets/capucinohot.jpg',
               title: 'Capucino Hot',
               harga: 'Rp.18000',
               jenis: 'coffee',
             ),
-            MenuList(
+            const MenuList(
               imageUrl: 'assets/gula aren.jpg',
               title: 'Gula Aren',
               harga: 'Rp.25000',
               jenis: 'coffee',
             ),
-            MenuList(
+            const MenuList(
               imageUrl: 'assets/americano.jpg',
               title: 'Americano',
               harga: 'Rp.21000',
               jenis: 'coffee',
             ),
-            MenuList(
+            const MenuList(
               imageUrl: 'assets/capucino.jpg',
               title: 'Capucino',
               harga: 'Rp.23000',
               jenis: 'coffee',
             ),
-            MenuList(
+            const MenuList(
               imageUrl: 'assets/capucinohot.jpg',
               title: 'Capucino Hot',
               harga: 'Rp.18000',
               jenis: 'coffee',
             ),
-            MenuList(
+            const MenuList(
               imageUrl: 'assets/gula aren.jpg',
               title: 'Gula Aren',
               harga: 'Rp.25000',

@@ -13,7 +13,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 10), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
     });
   }
@@ -35,7 +35,7 @@ class _SplashPageState extends State<SplashPage> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

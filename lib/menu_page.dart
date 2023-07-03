@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/home_beverages.dart';
+import 'widgets/menu_list.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -37,7 +38,9 @@ class _MenuPageState extends State<MenuPage> {
           items: [
             BottomNavigationBarItem(
               icon: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/home');
+                },
                 child: Image.asset(
                   'assets/ic_home.png',
                   width: 20,
@@ -61,7 +64,9 @@ class _MenuPageState extends State<MenuPage> {
             ),
             BottomNavigationBarItem(
               icon: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/deskripsi');
+                },
                 child: Image.asset(
                   'assets/ic_statistic.png',
                   width: 20,
@@ -102,6 +107,7 @@ class _MenuPageState extends State<MenuPage> {
           buildAppbar(context),
           buildPilihan(context),
           buildMenuMinuman(context),
+          buildMenuList(context),
           const SizedBox(
             height: 100,
           ),
@@ -243,6 +249,88 @@ Widget buildMenuMinuman(BuildContext context) {
           ),
         ],
       ),
+    ),
+  );
+}
+
+Widget buildMenuList(BuildContext context) {
+  return Container(
+    margin: const EdgeInsets.only(
+      top: 20,
+      left: 20,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Menu',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: Colors.black,
+          ),
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        Wrap(
+          spacing: 15,
+          runSpacing: 15,
+          children: [
+            MenuList(
+              imageUrl: 'assets/americano.jpg',
+              title: 'Americano',
+              harga: 'Rp.21000',
+              jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
+            ),
+            const MenuList(
+              imageUrl: 'assets/capucino.jpg',
+              title: 'Capucino',
+              harga: 'Rp.23000',
+              jenis: 'coffee',
+            ),
+            const MenuList(
+              imageUrl: 'assets/capucinohot.jpg',
+              title: 'Capucino Hot',
+              harga: 'Rp.18000',
+              jenis: 'coffee',
+            ),
+            const MenuList(
+              imageUrl: 'assets/gula aren.jpg',
+              title: 'Gula Aren',
+              harga: 'Rp.25000',
+              jenis: 'coffee',
+            ),
+            const MenuList(
+              imageUrl: 'assets/americano.jpg',
+              title: 'Americano',
+              harga: 'Rp.21000',
+              jenis: 'coffee',
+            ),
+            const MenuList(
+              imageUrl: 'assets/capucino.jpg',
+              title: 'Capucino',
+              harga: 'Rp.23000',
+              jenis: 'coffee',
+            ),
+            const MenuList(
+              imageUrl: 'assets/capucinohot.jpg',
+              title: 'Capucino Hot',
+              harga: 'Rp.18000',
+              jenis: 'coffee',
+            ),
+            const MenuList(
+              imageUrl: 'assets/gula aren.jpg',
+              title: 'Gula Aren',
+              harga: 'Rp.25000',
+              jenis: 'coffee',
+            ),
+          ],
+        ),
+      ],
     ),
   );
 }
