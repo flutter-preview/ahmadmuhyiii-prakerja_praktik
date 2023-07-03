@@ -166,7 +166,7 @@ Widget buildBtnCart(BuildContext context) {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
-              'Rp 20000',
+              'Rp 18000',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,

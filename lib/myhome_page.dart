@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.pushNamed(context, '/menu');
                 },
                 child: Image.asset(
-                  'assets/ic_history.png',
+                  'assets/ic_menu.png',
                   width: 20,
                   color: Colors.white,
                 ),
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.pushNamed(context, '/deskripsi');
                 },
                 child: Image.asset(
-                  'assets/ic_statistic.png',
+                  'assets/ic_love.png',
                   width: 20,
                   color: Colors.white,
                 ),
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: InkWell(
                 onTap: () {},
                 child: Image.asset(
-                  'assets/ic_reward.png',
+                  'assets/ic_profile.png',
                   width: 20,
                   color: Colors.white,
                 ),
@@ -352,6 +352,15 @@ Widget buildMenu(BuildContext context) {
           runSpacing: 15,
           children: [
             MenuList(
+              imageUrl: 'assets/capucinohot.jpg',
+              title: 'Capucino Hot',
+              harga: 'Rp.18000',
+              jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
+            ),
+            MenuList(
               imageUrl: 'assets/americano.jpg',
               title: 'Americano',
               harga: 'Rp.21000',
@@ -360,47 +369,59 @@ Widget buildMenu(BuildContext context) {
                 Navigator.pushNamed(context, '/deskripsi');
               },
             ),
-            const MenuList(
+            MenuList(
               imageUrl: 'assets/capucino.jpg',
               title: 'Capucino',
               harga: 'Rp.23000',
               jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
             ),
-            const MenuList(
-              imageUrl: 'assets/capucinohot.jpg',
-              title: 'Capucino Hot',
-              harga: 'Rp.18000',
-              jenis: 'coffee',
-            ),
-            const MenuList(
+            MenuList(
               imageUrl: 'assets/gula aren.jpg',
               title: 'Gula Aren',
               harga: 'Rp.25000',
               jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
             ),
-            const MenuList(
+            MenuList(
               imageUrl: 'assets/americano.jpg',
               title: 'Americano',
               harga: 'Rp.21000',
               jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
             ),
-            const MenuList(
+            MenuList(
               imageUrl: 'assets/capucino.jpg',
               title: 'Capucino',
               harga: 'Rp.23000',
               jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
             ),
-            const MenuList(
+            MenuList(
               imageUrl: 'assets/capucinohot.jpg',
               title: 'Capucino Hot',
               harga: 'Rp.18000',
               jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
             ),
-            const MenuList(
+            MenuList(
               imageUrl: 'assets/gula aren.jpg',
               title: 'Gula Aren',
               harga: 'Rp.25000',
               jenis: 'coffee',
+              onTap: () {
+                Navigator.pushNamed(context, '/deskripsi');
+              },
             ),
           ],
         ),
