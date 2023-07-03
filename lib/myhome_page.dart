@@ -224,51 +224,47 @@ Widget buildMinuman(BuildContext context) {
     margin: const EdgeInsets.only(
       top: 20,
     ),
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Beverages',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Beverages',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: Colors.black,
+          ),
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: const [
+              HomeBeverages(
+                iconUrl: 'assets/ic_signature.png',
+                title: 'Signatured',
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(width: 10),
+              HomeBeverages(
+                iconUrl: 'assets/ic_iced_cofe.png',
+                title: 'Iced Coffee',
               ),
-              Row(
-                children: const [
-                  HomeBeverages(
-                    iconUrl: 'assets/ic_signature.png',
-                    title: 'Signatured',
-                  ),
-                  SizedBox(width: 10),
-                  HomeBeverages(
-                    iconUrl: 'assets/ic_iced_cofe.png',
-                    title: 'Iced Coffee',
-                  ),
-                  SizedBox(width: 10),
-                  HomeBeverages(
-                    iconUrl: 'assets/ic_product_food.png',
-                    title: 'Hot Coffee',
-                  ),
-                  SizedBox(width: 10),
-                  HomeBeverages(
-                    iconUrl: 'assets/ic_cokolat.png',
-                    title: 'Chocolate',
-                  ),
-                ],
+              SizedBox(width: 10),
+              HomeBeverages(
+                iconUrl: 'assets/ic_product_food.png',
+                title: 'Hot Coffee',
+              ),
+              SizedBox(width: 10),
+              HomeBeverages(
+                iconUrl: 'assets/ic_cokolat.png',
+                title: 'Chocolate',
               ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     ),
   );
 }
@@ -278,51 +274,47 @@ Widget buildMakanan(BuildContext context) {
     margin: const EdgeInsets.only(
       top: 20,
     ),
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Foods',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Foods',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: Colors.black,
+          ),
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: const [
+              HomeFoods(
+                iconUrl: 'assets/ic_cake.png',
+                title: 'Signatured',
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(width: 10),
+              HomeFoods(
+                iconUrl: 'assets/ic_bakery.png',
+                title: 'Bakery',
               ),
-              Row(
-                children: const [
-                  HomeFoods(
-                    iconUrl: 'assets/ic_cake.png',
-                    title: 'Signatured',
-                  ),
-                  SizedBox(width: 10),
-                  HomeFoods(
-                    iconUrl: 'assets/ic_bakery.png',
-                    title: 'Bakery',
-                  ),
-                  SizedBox(width: 10),
-                  HomeFoods(
-                    iconUrl: 'assets/ic_salad.png',
-                    title: 'Salad',
-                  ),
-                  SizedBox(width: 10),
-                  HomeFoods(
-                    iconUrl: 'assets/ic_yogurt.png',
-                    title: 'Yougurt',
-                  ),
-                ],
+              SizedBox(width: 10),
+              HomeFoods(
+                iconUrl: 'assets/ic_salad.png',
+                title: 'Salad',
+              ),
+              SizedBox(width: 10),
+              HomeFoods(
+                iconUrl: 'assets/ic_yogurt.png',
+                title: 'Yougurt',
               ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     ),
   );
 }
