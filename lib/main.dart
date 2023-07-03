@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:prakerja_app_muhyi/deskripsi_page.dart';
 import 'package:prakerja_app_muhyi/menu_page.dart';
 import 'package:prakerja_app_muhyi/splash_page.dart';
-
 import 'myhome_page.dart';
 
 void main() {

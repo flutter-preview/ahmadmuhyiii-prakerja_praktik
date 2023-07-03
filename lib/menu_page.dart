@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'widgets/home_beverages.dart';
 import 'widgets/menu_list.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
-
   @override
   State<MenuPage> createState() => _MenuPageState();
 }

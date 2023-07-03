@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'widgets/milk.dart';
 
 class DeskripsiPage extends StatelessWidget {
   const DeskripsiPage({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
